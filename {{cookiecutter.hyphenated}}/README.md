@@ -16,7 +16,7 @@ pip install {{ cookiecutter.hyphenated }}
 An example
 
 ```py
-import {{ cookiecutter.hyphenated }}
+import {{ cookiecutter.underscored }}
 
 print("An example!")
 ```
