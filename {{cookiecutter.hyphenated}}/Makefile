@@ -10,7 +10,7 @@ prepare:
 .PHONY: lintable
 lintable: prepare
 	poetry run black $(sources)
-	poetry run ruff --fix $(sources)
+	poetry run ruff check --fix $(sources)
 
 
 .PHONY: lint
@@ -28,8 +28,9 @@ test: prepare
 
 
 # Test specific (earlier) versions of dependencies
-# .PHONY: test-dep-versions
-# test-dep-versions: prepare
+.PHONY: test-dep-versions
+test-dep-versions: prepare
+	echo "Not implemented yet"
 # 	poetry run pip install package=EARLIER_VERSION 
 # 	poetry run python -m pytest
 
